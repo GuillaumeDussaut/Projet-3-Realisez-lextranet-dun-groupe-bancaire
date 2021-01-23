@@ -10,7 +10,7 @@ include 'includes/login_form.php';
     </head>
     <body>
          <?php
-       include 'includes/header.php' 
+       include 'header.php' 
         ?> 
         <hr style="height: 2px; color: black; background-color: black; width: 90%; border: none;">
         <div class="text-center">
@@ -30,14 +30,14 @@ include 'includes/login_form.php';
                 <span>Mot de passe :</span><br>
                 <input type="password" name="password" placeholder="Mot de passe"><br><br>
 
-                <button type="submit">Se connecter</button>
+                <button type="submit" name="submit" value="se connecter">Se connecter</button>
             </form> 
 
             <br><br>
             <a href="pass_oublie.php">Mot de pass oublié?</a>
         </div>
         <?php
-        include 'includes/footer.php'
+        include 'footer.php'
         ?>
     </body>
 </html>

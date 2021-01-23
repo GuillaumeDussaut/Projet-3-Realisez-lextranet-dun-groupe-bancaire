@@ -16,7 +16,7 @@ include 'includes/regis_form.php';
     </head>
     <body>
         <?php
-        include 'includes/header.php'
+        include 'header.php'
         ?>
         <hr style="height: 2px; color: black; background-color: black; width: 90%; border: none;">
         <div class="text-center">
@@ -48,11 +48,21 @@ include 'includes/regis_form.php';
                 <span>Confirmation Mot de passe :</span><br>
                 <input type="password" name="password_confirm" placeholder="Confirmation Mot de passe"><br><br>
 
+                <select name="choix">
+                    <option value="choix" selected>Choisissez</option>
+                    <option value="choix1">Nom de jeune fille de votre mère?</option>
+                    <option value="choix2">Nom de votre premier animal de compagnie?</option>
+                    <option value="choix3">Ou êtes-vous né?</option>
+                </select><br><br>
+
+                <span>Réponse secrète : :</span><br>
+                <input type="text" name="reponse" placeholder="reponse"><br><br>
+
                 <input type="submit" name="submit" value="S'inscrire">
             </form> 
         </div>
         <?php
-        include 'includes/footer.php'
+        include 'footer.php'
         ?>
     </body>
 </html>

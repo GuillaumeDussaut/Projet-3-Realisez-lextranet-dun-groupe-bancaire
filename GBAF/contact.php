@@ -54,7 +54,7 @@ if(isset($_POST['envoyer'])) {
 </head>
 <body>
 <?php
-include 'includes/header.php'
+include 'header.php'
 ?>
         <hr style="height: 2px; color: black; background-color: black; width: 50%; border: none;">
         <div class="text-center">
@@ -74,7 +74,7 @@ include 'includes/header.php'
     <br><br>
 </form></center>
 <?php
-include 'includes/footer.php'
+include 'footer.php'
 ?>
 </body>
 </html>

@@ -9,7 +9,7 @@ session_start();
 </head>
 <body>	
 	<?php
-	include 'includes/header.php'
+	include 'header.php'
 	?>
 	<hr style="height: 2px; color: black; background-color: black; width: 50%; border: none;">
 	<center><a href="index.php">Accueil</a></center>
@@ -58,7 +58,7 @@ Le site ne recueille pas d’informations personnelles, et n’est pas assujetti
 
 
 	<?php
-	include 'includes/footer.php'
+	include 'footer.php'
 	?>
 </body>
 </html>
