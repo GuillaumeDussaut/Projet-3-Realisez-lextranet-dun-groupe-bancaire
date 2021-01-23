@@ -10,7 +10,7 @@ catch(Exception $e)
 
 $req = $bdd->query('SELECT id, titre, contenu, DATE_FORMAT(date_creation, \'%d/%m/%Y à %Hh%imin%ss\') AS date_creation_fr FROM Acteurs ORDER BY date_creation DESC LIMIT 0, 5');
 
-while ($donnees = $req->fetch())
+while ($donnees = $req->fetch());
 {
 ?>
 <div class="news">

@@ -4,13 +4,7 @@ if (isset($_SESSION['userEmail'])) {
 }
 
 if (isset($_POST['submit'])){
-    
-    /*$pseudo = htmlentities($_POST['pseudo']);
-    $email = htmlentities($_POST['email']);
-    $password = mysqli_real_escape_string($connect, $_POST['password']);
-    $password_confirm = mysqli_real_escape_string($connect, $_POST['password_confirm']);
-    date_default_timezone_set('Europe/Paris');
-    $date = date('d/m/Y à H:i:s');*/
+
 $post=array_map('htmlspecialchars', $_POST);
 $email=$post['email'];
 $pseudo=$post['pseudo'];
@@ -18,12 +12,14 @@ $prenom=$post['prenom'];
 $nom=$post['nom'];
 $password=$post['password'];
 $password_confirm=$post['password_confirm'];
+$choix = $post['choix'];
+$reponse_secrete=$post['reponse'];
     
                                 // CONDITIONS // 
 
 
-    if ((!empty($pseudo)) &&(!empty($prenom)) &&(!empty($nom)) && (!empty($email)) && (!empty($password_confirm)) && (!empty($password))) {
-        if (strlen($pseudo) <= 16) {
+    if ((!empty($pseudo)) &&(!empty($prenom)) &&(!empty($nom)) && (!empty($email)) && (!empty($password_confirm)) && (!empty($password)) && (!empty($choix)) && (!empty($reponse_secrete))) {
+        if (strlen($pseudo) <= 50) {
             if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 if ($password == $password_confirm) {
 
@@ -33,13 +29,16 @@ $password_confirm=$post['password_confirm'];
                         $rowPseudo = countDatabaseValue($database, 'user_pseudo', $pseudo);
                         if ($rowPseudo == 0) {
                             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-                            $insertMember = $database->prepare("INSERT INTO users(user_pseudo, user_prenom, user_nom, user_email, user_password) VALUES(?, ?, ?, ?, ?)");
+                            $reponse_secrete = password_hash($_POST['reponse'], PASSWORD_DEFAULT);
+                            $insertMember = $database->prepare("INSERT INTO users(user_pseudo, user_prenom, user_nom, user_email, user_password, question, reponse) VALUES(?, ?, ?, ?, ?, ?, ?)");
                             $insertMember->execute([
                                 $pseudo,
                                 $prenom,
                                 $nom,
                                 $email,
                                 $password,
+                                $choix,
+                                $reponse_secrete,
                             ]);
                             $succesMessage = "Votre compte à bien été créé !";
                             header('refresh:3;url=login.php');
