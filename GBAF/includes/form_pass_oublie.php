@@ -24,7 +24,7 @@ if(!empty($email) AND !empty($reponse_secrete)){
 
     
 $post=array_map('htmlspecialchars', $_POST);
-$requestUser = $database->prepare('SELECT user_email, reponse, question FROM users WHERE user_email = :user_email');
+$requestUser = $database->prepare('SELECT * FROM users WHERE user_email = :user_email');
 
 
 $requestUser->bindValue(':user_email', $post['email']);
@@ -33,14 +33,15 @@ $requestUser->bindValue(':user_email', $post['email']);
         $userCount = $requestUser->fetch(PDO::FETCH_ASSOC);
             $succesMessage = 'phase 2 ok';
         if(!empty($userCount)){
-            $succesMessage = 'phase 2 ok';
+            $succesMessage = 'phase 3 ok';
             
 
-            $hash=$userCount['reponse'];
+            
             if($post['choix'] == $userCount['question']){
-                $succesMessage = $userCount['question'];
 
-                if(password_verify($post['reponse'], $userCount['reponse'])){
+                $succesMessage = $userCount['question'];
+                                // problème pass_verif
+                
                 $succesMessage = 'bonjour';
 
                     if ($post['reponse']==$userCount['reponse']){
@@ -62,10 +63,7 @@ $requestUser->bindValue(':user_email', $post['email']);
                     }else{
                     $errorMessage = 'Mauvaise réponse secrète';
                     }
-                }else{
-                    $errorMessage='mauvaise question';
-                }
-                }else{
+                                }else{
                     $errorMessage = $post['reponse'];
                 }
 
