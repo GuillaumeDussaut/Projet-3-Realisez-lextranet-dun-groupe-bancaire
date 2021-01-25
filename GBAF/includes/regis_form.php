@@ -29,7 +29,7 @@ $reponse_secrete=$post['reponse'];
                         $rowPseudo = countDatabaseValue($database, 'user_pseudo', $pseudo);
                         if ($rowPseudo == 0) {
                             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-                            $reponse_secrete = password_hash($_POST['reponse'], PASSWORD_DEFAULT);
+                            
                             $insertMember = $database->prepare("INSERT INTO users(user_pseudo, user_prenom, user_nom, user_email, user_password, question, reponse) VALUES(?, ?, ?, ?, ?, ?, ?)");
                             $insertMember->execute([
                                 $pseudo,
