@@ -9,7 +9,7 @@ $post=[];
 if (isset($_POST['submit'])) {
 
     $database = getPDO();
-        if((!empty($oldpassword)) && (!empty($newpasword)) && (!empty($confirm_newpassword))){
+        if((!empty($newpasword)) && (!empty($confirm_newpassword))){
             $errorMessage = 'veuillez remplir tous les champs!';
         }else{
 
@@ -27,23 +27,21 @@ if (isset($_POST['submit'])) {
                 $userCount = $requestUser->fetch(PDO::FETCH_ASSOC);
 
                 if($post['password'] = $post['confirm_password']){
-                    if(password_verify($post['old_password'], $userCount['user_password']))
-                    {
-                        if($post['old_password']=$userCount['user_password'])
-                        {
+                    var_dump($post['password']);
+                    var_dump($_SESSION);
+                    
                             $newPassword = password_hash($post['password'], PASSWORD_DEFAULT);
-                            $requestUser = $database->prepare("UPDATE users SET user_password = ? WHERE user_email = :user_mail");
-                            $requestUser->execute([
-                            $newPassword,
-                            $_SESSION['userEmail'],
-                            ]);
+                            $requestUserTest = $database->prepare('UPDATE users SET user_password = :user_password WHERE user_email = :user_mail');
+                            $requestUserTest->bindvalue(':user_password', $newPassword, PDO::PARAM_STR);
+                            if($requestUserTest->execute()){
+
                             $succesMessage=' Nouveau mot de pass enregistré!';
-                        }
+                            }
+
+                        
 
 
-                    }else{
-                        $errorMessage = 'ancien mdp incorrect';                    
-                    }
+                    
                 }else{
                     $errorMessage = 'les deux mdp ne correspondent pas!' ;
                 }
@@ -56,6 +54,7 @@ if (isset($_POST['submit'])) {
 <html>
     <head>
         <title>Espace Client - Accueil</title>
+        <link rel="shortcut icon" type="image/png" href="img/fav_icon_gbaf.png">
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
