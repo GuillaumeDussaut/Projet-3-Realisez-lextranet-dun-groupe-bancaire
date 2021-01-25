@@ -27,16 +27,22 @@ if (isset($_POST['submit'])) {
                 $userCount = $requestUser->fetch(PDO::FETCH_ASSOC);
 
                 if($post['password'] = $post['confirm_password']){
-                    var_dump($post['password']);
-                    var_dump($_SESSION);
-                    
-                            $newPassword = password_hash($post['password'], PASSWORD_DEFAULT);
-                            $requestUserTest = $database->prepare('UPDATE users SET user_password = :user_password WHERE user_email = :user_mail');
-                            $requestUserTest->bindvalue(':user_password', $newPassword, PDO::PARAM_STR);
-                            if($requestUserTest->execute()){
 
-                            $succesMessage=' Nouveau mot de pass enregistré!';
-                            }
+                    if($post['email'] = $userCount['user_email']){
+                            $newPassword = password_hash($post['password'], PASSWORD_DEFAULT);
+                            $requestUser = $database->prepare("UPDATE users SET user_password = ? WHERE user_email = ?");
+                            $requestUser->execute([
+                                $newPassword,
+                                $_SESSION['userEmail'],
+                            ]);
+                            session_destroy();
+                            header('refresh:3;url=login.php');
+
+                            $succesMessage='Nouveau mot de pass enregistré!';
+                    }else{
+                         var_dump($requestUser->errorInfo());
+                    }
+                            
 
                         
 
@@ -48,7 +54,6 @@ if (isset($_POST['submit'])) {
             }
         }
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,7 +66,7 @@ if (isset($_POST['submit'])) {
         <?php
         include 'header.php'
         ?>
-        <hr style="height: 2px; color: black; background-color: black; width: 50%; border: none;">
+        <hr class="barre">
         <div class="text-center">
             <h3>Nouveau Mot de pass</h3>          
         </div>
@@ -75,7 +80,7 @@ if (isset($_POST['submit'])) {
                         <h3>Changer de mot de passe</h3>
                         <?php if (isset($errorMessage)) { ?> <p style="color: red;"><?= $errorMessage ?></p> <?php } ?>
                         <?php if (isset($succesMessage)) { ?> <p style="color: green;"><?= $succesMessage ?></p> <?php } ?>
-                        <form method="post" action="">
+                        <form method="post">
                             <span>Adresse email :</span><br>
                             <input type="email" name="email" placeholder="Adresse email"><br>
 
