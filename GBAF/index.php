@@ -5,6 +5,7 @@ session_start();
 <html>
     <head>
         <title>Espace Client - Accueil</title>
+        <link rel="shortcut icon" type="image/png" href="img/fav_icon_gbaf.png">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylsheet" type="text/css" href="css/base_media.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -16,8 +17,8 @@ session_start();
         <?php
         include 'header.php';
         ?>
+        <div class="barre"></div>
         
-        <hr style="height: 2px; color: black; background-color: black; width: 90%; border: none;">
         <div class="text-center">
             <h3>Espace Client - Accueil</h3>
         </div>
