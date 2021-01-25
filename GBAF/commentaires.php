@@ -4,7 +4,8 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
+        <link rel="shortcut icon" type="image/png" href="img/fav_icon_gbaf.png">
+        <meta charset="utf-8">
         <title>Espace clients - Articles</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -15,7 +16,7 @@ session_start();
         include 'header.php';
         ?>
         
-        <hr style="height: 2px; color: black; background-color: black; width: 90%; border: none;">
+        <hr class="barre">
         <br>
         <center><h1>Acteurs</h1>
         <p><a href="index.php">Retour à la page d'accueil.</a></p></center>

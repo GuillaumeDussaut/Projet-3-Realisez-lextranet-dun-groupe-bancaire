@@ -4,6 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="shortcut icon" type="image/png" href="img/fav_icon_gbaf.png">
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -11,7 +12,7 @@ session_start();
 	<?php
 	include 'header.php'
 	?>
-	<hr style="height: 2px; color: black; background-color: black; width: 50%; border: none;">
+	<hr class="barre">
 	<center><a href="index.php">Accueil</a></center>
 
 <div class="form-div text-center">

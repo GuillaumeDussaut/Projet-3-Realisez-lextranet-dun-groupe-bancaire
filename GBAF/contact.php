@@ -49,6 +49,7 @@ if(isset($_POST['envoyer'])) {
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="shortcut icon" type="image/png" href="img/fav_icon_gbaf.png">
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -56,7 +57,7 @@ if(isset($_POST['envoyer'])) {
 <?php
 include 'header.php'
 ?>
-        <hr style="height: 2px; color: black; background-color: black; width: 50%; border: none;">
+        <hr class="barre">
         <div class="text-center">
             <h3>Espace Client - Inscription</h3>
             <a href="index.php">Accueil</a>

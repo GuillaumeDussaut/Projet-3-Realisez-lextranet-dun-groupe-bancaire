@@ -35,8 +35,8 @@ if (isset($_POST['submit'])) {
                             $newPassword = password_hash($post['password'], PASSWORD_DEFAULT);
                             $requestUser = $database->prepare("UPDATE users SET user_password = ? WHERE user_email = :user_mail");
                             $requestUser->execute([
-                            $newPassword,
-                            $_SESSION['userEmail'],
+                                $newPassword,
+                                $_SESSION['userEmail'],
                             ]);
                             $succesMessage=' Nouveau mot de pass enregistré!';
                         }
@@ -57,6 +57,7 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="shortcut icon" type="image/png" href="img/fav_icon_gbaf.png">
         <title>Espace Client - Accueil</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
@@ -64,7 +65,7 @@ if (isset($_POST['submit'])) {
         <?php
         include 'header.php'
         ?>
-        <hr style="height: 2px; color: black; background-color: black; width: 50%; border: none;">
+        <hr class="barre">
         <div class="text-center">
             <h3>Espace Client</h3>
 

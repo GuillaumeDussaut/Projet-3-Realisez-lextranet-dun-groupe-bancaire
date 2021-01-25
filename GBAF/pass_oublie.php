@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <link rel="shortcut icon" type="image/png" href="img/fav_icon_gbaf.png">
 	<meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Mot de pass oublié</title>
@@ -14,7 +15,7 @@
     include 'header.php';
 ?>
 
-    <hr style="height: 2px; color: black; background-color: black; width: 50%; border: none;">
+    <hr class="barre">
                    
     <body>
 

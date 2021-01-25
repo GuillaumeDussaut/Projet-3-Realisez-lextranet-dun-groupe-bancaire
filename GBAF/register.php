@@ -11,6 +11,7 @@ include 'includes/regis_form.php';
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="shortcut icon" type="image/png" href="img/fav_icon_gbaf.png">
         <title>Espace Client - Inscription</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
@@ -18,7 +19,7 @@ include 'includes/regis_form.php';
         <?php
         include 'header.php'
         ?>
-        <hr style="height: 2px; color: black; background-color: black; width: 90%; border: none;">
+        <hr class="barre">
         <div class="text-center">
             <h3>Espace Client - Inscription</h3>
             <a href="index.php">Accueil</a>
