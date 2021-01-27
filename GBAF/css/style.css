@@ -140,6 +140,10 @@ img{
 	width:auto;
 }
 
+.avatar{
+    width:70px;
+
+}
 }
 .footer {
     text-align: center;
