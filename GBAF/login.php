@@ -14,7 +14,7 @@ include 'includes/login_form.php';
        include 'header.php' 
         ?> 
         <hr class="barre">
-        <div class="text-center">
+        <div class="form-div3 text-center">
             <h3>Espace Client - Connexion</h3>
             <a href="index.php">Accueil</a>
             <a href="register.php">S'inscrire</a>

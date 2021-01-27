@@ -9,6 +9,8 @@ session_start();
         <title>Espace clients - Articles</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
+
+
     </head>
         
     <body>
@@ -121,6 +123,8 @@ $req->closeCursor();
         <?php if (isset($errorMessage)) { ?> <p style="color: red;"><?= $errorMessage ?></p> <?php } ?>
         <?php if (isset($succesMessage)) { ?> <p style="color: green;"><?= $succesMessage ?></p> <?php } ?>
         <p>
+</div>
+<div class="form-div text-center">
         <label for="pseudo">Pseudo</label> : <br><input type="text" name="pseudo" id="pseudo" /><br />
         <label for="message">Message</label> :  <br><input type="text" name="commentaire" id="commentaire" /><br />
 
