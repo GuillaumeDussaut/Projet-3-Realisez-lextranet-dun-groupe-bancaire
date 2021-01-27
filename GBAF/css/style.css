@@ -136,6 +136,9 @@ h1, h4, h3, a, label, span, button {
 	font-size:2em;
 
 }
+img{
+	width:auto;
+}
 
 }
 .footer {
