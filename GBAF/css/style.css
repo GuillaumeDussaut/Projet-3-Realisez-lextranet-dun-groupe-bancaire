@@ -32,22 +32,7 @@
     border-radius: 5px;
     width: 400px;
 }
-.footer {
-    text-align: center;
-    background-color: black;
-    padding: 40px;
-    position:relative;
-    top:350px;
 
-}
-
-.header{
-	text-align: center;
-    background-color: #B6B6F1;
-
-
-
-}
 
 
 .membre{
@@ -69,9 +54,121 @@ left:20px;
 }
 
 h1 {
-	font-size:320%;
+    font-size:320%;
+
 }
 
 h4 {
-	font-size:120%;
+    font-size:120%;
+
 }
+
+
+                /*responsive query*/
+
+
+
+@media all and (max-width: 1024px)
+{
+
+.text-center {
+    text-align: center;
+}
+
+.form-div {
+    background-color: #B6B6F1;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    width: auto;
+}
+
+.form-div2 {
+    background-color: #B6B6F1;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    width: auto;
+}
+
+.form-div3 {
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    width: auto;
+}
+
+
+
+.membre{
+position: relative;
+left:20px;
+}
+
+.news{
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+    width: auto;
+    border: 2px solid black;
+}
+
+input{
+  height: auto;
+  width: auto;
+  font-size: 2em;
+}
+select{
+    height: auto;
+    width: auto;
+    font-size: 2em;
+}
+
+.ul {
+    text-align:center;
+}
+
+
+
+h1 {
+	font-size:2em;
+
+}
+
+h4 {
+	font-size:2em;
+
+}
+h3{
+    font-size:2em;
+}
+a{
+    font-size:2em;
+}
+label{
+    font-size:2em;
+}
+
+}
+.footer {
+    text-align: center;
+    background-color: black;
+    padding: 40px;
+    position:relative;
+    top:350px;
+
+}
+
+.header{
+    text-align: center;
+    background-color: #B6B6F1;
+
+
+
+}
+
+
+
+
