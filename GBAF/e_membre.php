@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
                         if($post['old_password']=$userCount['user_password'])
                         {
                             $newPassword = password_hash($post['password'], PASSWORD_DEFAULT);
-                            $requestUser = $database->prepare("UPDATE users SET user_password = ? WHERE user_email = :user_mail");
+                            $requestUser = $database->prepare("UPDATE users SET user_password = ? WHERE user_email = ?");
                             $requestUser->execute([
                                 $newPassword,
                                 $_SESSION['userEmail'],
