@@ -20,7 +20,7 @@ include 'header.php'
 <div class="form-div3 text-center">
     <h3>Espace Client - Inscription</h3>
     <a href="index.php">Accueil</a>
-    <a href="login.php">Se Connecter</a>
+    <a href="connexion.php">Se Connecter</a>
 </div>
 <div class="form-div text-center">
     <h3>Inscription</h3>
