@@ -57,9 +57,8 @@ Tout utilisateur dispose d’un droit d’accès, de rectification et d’opposi
 Le site ne recueille pas d’informations personnelles, et n’est pas assujetti à déclaration à la CNIL.</p>
 </div>
 
-
-	<?php
-	include 'footer.php'
-	?>
+<?php
+include 'footer.php'
+?>
 </body>
 </html>

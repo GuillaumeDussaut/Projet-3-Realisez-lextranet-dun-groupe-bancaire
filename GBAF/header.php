@@ -12,9 +12,6 @@
 				<br><br>
 			</div>
 		</div>
-
-
-
 <div class="e-membre">
 <?php if (isset($_SESSION['userEmail'])) { ?>
 	<div class="membre">
@@ -23,13 +20,9 @@
 	<strong><?=htmlentities(trim($_SESSION['userNom'])); ?></strong><br>
 
 	<a href="deconnexion.php">Se déconnecter</a>
-<?php }  else { ?>
-
-	
-	
-        
-                <?php } ?>
+<?php }  else { ?>        
+<?php } ?>
 
 </div>
-</body>
-</head>
+	</body>
+</html>

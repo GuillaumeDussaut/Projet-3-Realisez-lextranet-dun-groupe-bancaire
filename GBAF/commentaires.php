@@ -8,24 +8,16 @@ session_start();
         <meta charset="utf-8">
         <title>Espace clients - Articles</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-
-
-
-    </head>
-        
+    </head>       
     <body>
-                <?php
-        include 'header.php';
-        ?>
-        
-        <hr class="barre">
-        <br>
-        <center><h1>Acteurs</h1>
-        <p><a href="index.php">Retour à la page d'accueil.</a></p></center>
-
- 
 <?php
-                            // Connexion à la base de données
+include 'header.php';
+?>      
+<hr class="barre">
+<br>
+<center><h1>Acteurs</h1>
+<p><a href="index.php">Retour à la page d'accueil.</a></p></center>
+<?php                           // Connexion à la base de données
 try
 {
 	$bdd = new PDO('mysql:host=localhost;dbname=clients;port:3306;charset=utf8', 'root', '');
@@ -47,46 +39,38 @@ $donnees = $req->fetch();
     $dislikes = $bdd->prepare('SELECT id FROM dislikes WHERE id_acteur = ?');
     $dislikes->execute(array($_GET['acteur']));
     $dislikes = $dislikes->rowCount();
-
-
-
-
 ?>
                                 <!--  logo de l'acteur -->
             <?echo $donnees['logo_acteur'] ?>
         
-      <br><br><br> <center><?php
-    echo '<img src="img/'.$donnees['logo_acteur'].'" name="logo_acteurs" width="50%" height="50%" >';
+<br><br><br> <center><?php
+echo '<img src="img/'.$donnees['logo_acteur'].'" name="logo_acteurs" width="50%" height="50%" >';
 ?></center>
         
 <div class="form-div3 text-center">
 
 
                                 <!-- contenu de l'article  -->
-    <center><h3>
-        <?php echo htmlspecialchars($donnees['titre']); ?>
-    </h3></center>   
-    <p>
-    <?php
+<center><h3>
+<?php echo htmlspecialchars($donnees['titre']); ?>
+</h3></center>   
+<p>
+<?php
+$id_acteur=$_GET['acteur'];
 
-    $id_acteur=$_GET['acteur'];
+ echo nl2br(htmlspecialchars($donnees['contenu']));
 
-    echo nl2br(htmlspecialchars($donnees['contenu']));
-
-    ?><br>
+?><br>
                                  <!--système de like/dislike-->
-    </p>
+</p>
 <div class="likes">
-        <a href="includes/like.php?t=1&acteur=<?php echo $id_acteur ?>">J'aime</a> <?php echo $likes ?>
-        <br>
-        <a href="includes/like.php?t=2&acteur=<?php echo $id_acteur ?>">Je n'aime pas</a> <?php echo $dislikes ?>
+    <a href="includes/like.php?t=1&acteur=<?php echo $id_acteur ?>">J'aime</a> <?php echo $likes ?>
+    <br>
+    <a href="includes/like.php?t=2&acteur=<?php echo $id_acteur ?>">Je n'aime pas</a> <?php echo $dislikes ?>
 </div>
 </div>
-
 
                                 <!--      commentaires      -->
-
-
 <div class="form-div2 text-center ">
 
     <h4>Commentaires :</h4><br><br>
@@ -103,41 +87,33 @@ while ($donnees = $req->fetch())
 <p><strong><u><?php echo htmlspecialchars($donnees['pseudo']); ?>:</u></strong> le <?php echo $donnees['date_commentaire_fr']; ?></p>
 <p><?php echo nl2br(htmlspecialchars($donnees['commentaire'])); ?></p>
 
-
 <?php
 } 
 $req->closeCursor();
-    
-
-
 ?>
-
 </div>
-
                                     <!--  système de commentaire  -->
 
 <div class="form-div text-center">
-                        <h4>Laissez votre commentaire ici :</h4>
+    <h4>Laissez votre commentaire ici :</h4>
     <form method="post" action="">
-        <?php if (isset($errorMessage)) { ?> <p style="color: red;"><?= $errorMessage ?></p> <?php } ?>
-        <?php if (isset($succesMessage)) { ?> <p style="color: green;"><?= $succesMessage ?></p> <?php } ?>
-        <p>
+<?php if (isset($errorMessage)) { ?> <p style="color: red;"><?= $errorMessage ?></p> <?php } ?>
+<?php if (isset($succesMessage)) { ?> <p style="color: green;"><?= $succesMessage ?></p> <?php } ?>
+<p>
 </div>
 <div class="form-div text-center">
         
-        <label for="message">Message</label> :  <br><input type="text" name="commentaire" id="commentaire" /><br />
+    <label for="message">Message</label> :  <br><input type="text" name="commentaire" id="commentaire" /><br />
 
-        <input type="submit" name="submit" value="Envoyer" action="Location:commentaires.php?acteur=<?php echo $id_acteur; ?>" />
-    </p>
-    </form>
-    <?php
-        include 'includes/formulaire_commentaires.php';
-    ?>
-
+    <input type="submit" name="submit" value="Envoyer" action="Location:commentaires.php?acteur=<?php echo $id_acteur; ?>" />
+</p>
+</form>
+<?php
+include 'includes/formulaire_commentaires.php';
+?>
 </div>
-
-        <?php
-        include 'footer.php';
-        ?>
+<?php
+include 'footer.php';
+?>
 </body>
 </html>
