@@ -5,8 +5,8 @@ session_start();
 $database = new PDO('mysql:host=localhost;dbname=clients;charset=utf8', 'root', '');
 
 
-if(isset($_GET['billet']) && !empty($_GET['billet'])) {
-	$getid = (int) $_GET['billet'];
+if(isset($_GET['acteur']) && !empty($_GET['acteur'])) {
+	$getid = (int) $_GET['acteur'];
 	$gett = (int) $_GET['t'];
 
 	$sessionid = $_SESSION['userID'];
@@ -44,7 +44,7 @@ if($check_like->rowCount() == 1){
 }
 
 }
-header('Location: http://localhost/P3_Dussaut_Guillaume/GBAF/commentaires.php?billet=' .$getid);
+header('Location: http://localhost/P3_Dussaut_Guillaume/GBAF/commentaires.php?acteur=' .$getid);
 }else{echo 'erreur 2';}
 
 }else{echo 'erreur 1';}           

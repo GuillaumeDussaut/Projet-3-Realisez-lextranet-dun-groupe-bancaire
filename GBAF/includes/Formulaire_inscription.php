@@ -42,7 +42,7 @@ if ($rowPseudo == 0) {
     $reponse_secrete,
     ]);
     $succesMessage = "Votre compte à bien été créé !";
-header('refresh:3;url=login.php');
+header('refresh:3;url=connexion.php');
 }else{
     $errorMessage = 'Cette pseudo est déjà utilisée..';
 }
