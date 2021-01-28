@@ -7,6 +7,7 @@ session_start();
         <title>Espace Client - Accueil</title>
         <link rel="shortcut icon" type="image/png" href="img/fav_icon_gbaf.png">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        
     </head>
     <body>
 <?php
@@ -43,7 +44,7 @@ les axes de la réglementation financière française. Sa mission est de promouv
 l'activité bancaire à l’échelle nationale. C’est aussi un interlocuteur privilégié des
 pouvoirs publics.</p></center>
 <br><br>
-<center><img src="img/img_accueil.jpeg" class="accueil"></center>
+<div class="image_accueil"><center><img src="img/img_accueil.jpeg" class="accueil"></center></div>
 <br><br>
 
                     <!-- zone blog avec les articles -->

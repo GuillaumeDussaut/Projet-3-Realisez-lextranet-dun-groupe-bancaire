@@ -6,6 +6,7 @@ session_start();
     <head>
         <link rel="shortcut icon" type="image/png" href="img/fav_icon_gbaf.png">
         <meta charset="utf-8">
+        
         <title>Espace clients - Articles</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
     </head>       
@@ -44,7 +45,7 @@ $donnees = $req->fetch();
             <?echo $donnees['logo_acteur'] ?>
         
 <br><br><br> <center><?php
-echo '<img src="img/'.$donnees['logo_acteur'].'" name="logo_acteurs" width="50%" height="50%" >';
+echo '<div class="logo_acteur2"><img src="img/'.$donnees['logo_acteur'].'" ></div>';
 ?></center>
         
 <div class="form-div3 text-center">

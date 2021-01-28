@@ -3,9 +3,11 @@
 	<head>
 		<link rel="stylsheet" type="text/css" href="css/style.css">
 		<div class="header">
-		<center><a href="index.php"><img src="img/logo_gbaf.png" width=10%;></a></center>
+		
+		<center><a href="index.php"><div class="logo_GBAF"><img src="img/logo_gbaf.png" width=10%;></div></a></center>
 	</head>
 	<body>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<div class="text-header">
 				<center><h4>Le groupement banques assurances</h4></center>
 			</div>
