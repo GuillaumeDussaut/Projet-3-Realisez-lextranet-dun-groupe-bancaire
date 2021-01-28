@@ -49,18 +49,25 @@ left:20px;
 }
 .ul {
     text-align:center;
+
 }
 
 }
 
 h1 {
     font-size:320%;
-
+    text-align:center;
+}
+h3{
+    text-align:center;
 }
 
 h4 {
     font-size:120%;
-
+    text-align:center;
+}
+p {
+    text-align: center;
 }
 
 
@@ -134,7 +141,7 @@ select{
 
 h1, h4, h3, a, label, span, button {
 	font-size:2em;
-
+    text-align:center;
 }
 img{
 	width:auto;
