@@ -29,7 +29,7 @@ if($post['email'] = $userCount['user_email']){
     $_SESSION['userEmail'],
     ]);
     session_destroy();
-    header('refresh:3;url=login.php');
+    header('refresh:3;url=connexion.php');
 
     $succesMessage='Nouveau mot de pass enregistré!';
 }else{
