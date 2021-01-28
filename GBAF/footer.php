@@ -5,7 +5,7 @@
 		</head>
 		<body>
 			<div class="footer">
-				<a href="m_legales.php" style="color:white">Mentions legales</a>
+				<a href="mentions_legales.php" style="color:white">Mentions legales</a>
 				<a href="mailto:kickkungfumusique@gmail.com" style="color:white">Nous contacter</a>
 			</div>
 		</body>

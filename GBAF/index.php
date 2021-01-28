@@ -66,9 +66,9 @@ include 'includes/acteurs.php';
 
 
             <?php }  else { ?>
-                <center><h1>Veuillez vous connecter.</h1><a href="login.php">Se connecter</a></center></center>
+                <center><h1>Veuillez vous connecter.</h1><a href="connexion.php">Se connecter</a></center></center>
 
-            <center><p>Pas encore inscrit? cliquez ici pour créer votre compte : <a href="register.php">S'inscrire</a></p></center>
+            <center><p>Pas encore inscrit? cliquez ici pour créer votre compte : <a href="Inscription.php">S'inscrire</a></p></center>
             
             <?php } ?>
             

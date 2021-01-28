@@ -18,11 +18,11 @@
 <div class="e-membre">
 <?php if (isset($_SESSION['userEmail'])) { ?>
 	<div class="membre">
-	<a href="e_membre.php"><br><img src="img/avatar.png"></a>
+	<a href="espace_membre.php"><br><img src="img/avatar.png" class="avatar"></a>
 	<br><strong><?=htmlentities(trim($_SESSION['userPrenom'])); ?></strong>
 	<strong><?=htmlentities(trim($_SESSION['userNom'])); ?></strong><br>
 
-	<a href="logout.php">Se déconnecter</a>
+	<a href="deconnexion.php">Se déconnecter</a>
 <?php }  else { ?>
 
 	
