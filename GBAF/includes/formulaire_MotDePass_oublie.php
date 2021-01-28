@@ -31,17 +31,17 @@ $requestUser->bindValue(':user_email', $post['email']);
 
 if($requestUser->execute()){
     $userCount = $requestUser->fetch(PDO::FETCH_ASSOC);
-    $succesMessage = 'phase 2 ok';
+    
 if(!empty($userCount)){
-    $succesMessage = 'phase 3 ok';          
+              
 
 if($post['choix'] == $userCount['question']){
     $succesMessage = $userCount['question'];
     $succesMessage = 'bonjour';
 
 if ($post['reponse']==$userCount['reponse']){              
-    $succesMessage = 'phase 4 ok';
-    $succesMessage = 'Bonne réponse!';
+    
+    
 session_start();
     $_SESSION['userID'] = $userCount['user_id']; 
     $_SESSION['userPseudo'] = $userCount['user_pseudo']; 
@@ -55,6 +55,7 @@ header('refresh:1;url=formulaire_nouveau_mot_de_pass.php');
 }else{
     $errorMessage = 'Mauvaise réponse secrète';
 }
+}else{$errorMessage = 'mauvaise question secrète';
 }
     
 }
