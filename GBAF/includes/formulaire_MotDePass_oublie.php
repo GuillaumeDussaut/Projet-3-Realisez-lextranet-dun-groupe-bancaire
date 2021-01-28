@@ -50,13 +50,13 @@ session_start();
     $_SESSION['userEmail'] = $userCount['user_email'];
     $_SESSION['choix'] = $userCount['question'];
     $_SESSION['reponse'] = $userCount['reponse'];
-header('refresh:1;url=new_mdp.php');
+header('refresh:1;url=formulaire_nouveau_mot_de_pass.php');
     $succesMessage ='Vous êtes maintenant connectés!';
 }else{
     $errorMessage = 'Mauvaise réponse secrète';
 }
-}else{
-    $errorMessage = $post['reponse'];
+}
+    
 }
 }else{
     $errorMessage = 'Vous n\'avez pas encore de compte!';
@@ -64,5 +64,5 @@ header('refresh:1;url=new_mdp.php');
 }    
 }else{$errorMessage = 'Veuillez remplir tous les champs!';
 }
-}
+
 ?>                                    
