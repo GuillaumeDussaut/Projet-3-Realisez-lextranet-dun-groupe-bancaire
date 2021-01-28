@@ -58,7 +58,7 @@ include 'header.php'
     <h3>Nouveau Mot de pass</h3>          
 </div>
 <br><br>
-<center><img src="img/avatar-grand.png" width=10%></center>
+
 <div class="form-div text-center">
     <h3>Information</h3>
 <?php if (isset($_SESSION['userEmail'])) { ?>                       
