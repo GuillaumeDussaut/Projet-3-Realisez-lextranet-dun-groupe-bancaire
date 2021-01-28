@@ -20,11 +20,11 @@ while ($donnees = $req->fetch())
     <?php echo htmlspecialchars($donnees['titre']); ?>
     </h3></center>    
 <p>       
-        <?echo $donnees['logo_acteur'] ?>
         
-    <center> <br><?php
-    echo '<img src="img/'.$donnees['logo_acteur'].'"width="30%" height="30%">';
-    ?><br></center>
+        
+    <br><center><?php
+    echo '<div class="image_acteurs"><img src="img/'.$donnees['logo_acteur'].' "></div>';
+    ?></center><br>
 <?php
 echo nl2br(htmlspecialchars($donnees['contenu']));    
 ?>
