@@ -74,98 +74,6 @@ p {
     max-width: 100%;
     height: auto;
 }
-
-                /*responsive query*/
-
-@media all and (max-width: 1024px)
-{
-.device-width
-{
-    width: auto;
-    margin: auto;
-}
-.image_accueil {
-    display:none;
-}
-.image_acteurs{
-    display:none;
-}
-
-
-.text-center {
-    text-align: center;
-}
-
-.form-div {
-    background-color: #B6B6F1;
-    margin: auto;
-    padding: 10px;
-    border-radius: 5px;
-    width: auto;
-}
-
-.form-div2 {
-    background-color: #B6B6F1;
-    margin: auto;
-    padding: 10px;
-    border-radius: 5px;
-    width: auto;
-}
-
-.form-div3 {
-    background-color: white;
-    margin: auto;
-    padding: 10px;
-    border-radius: 5px;
-    width: auto;
-}
-
-
-
-.membre{
-position: relative;
-left:20px;
-}
-
-.news{
-    background-color: white;
-    margin: auto;
-    padding: 10px;
-    border-radius: 5px;
-    width: auto;
-    border: 2px solid black;
-}
-
-input{
-  height: auto;
-  width: auto;
-  font-size: 2em;
-}
-select{
-    height: auto;
-    width: auto;
-    font-size: 2em;
-}
-
-.ul {
-    text-align:center;
-}
-
-
-
-h1, h4, h3, a, label, span, button {
-	font-size:2em;
-    text-align:center;
-}
-img{
-	width:auto;
-}
-
-.avatar{
-    width:70px;
-
-}
-}
 .footer {
     text-align: center;
     background-color: black;
@@ -174,12 +82,91 @@ img{
     top:350px;
 
 }
-
 .header{
     text-align: center;
     background-color: #B6B6F1;
+}
 
 
+
+
+                /*responsive query*/
+
+
+
+@media all and (max-width: 1024px)
+{
+    .device-width
+    {
+        width: auto;
+        margin: auto;
+    }
+    .image_accueil {
+        display:none;
+    }
+    .image_acteurs{
+        display:none;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .form-div {
+        background-color: #B6B6F1;
+        margin: auto;
+        padding: 10px;
+        border-radius: 5px;
+        width: auto;
+    }
+    .form-div2 {
+        background-color: #B6B6F1;
+        margin: auto;
+        padding: 10px;
+        border-radius: 5px;
+        width: auto;
+    }
+    .form-div3 {
+        background-color: white;
+        margin: auto;
+        padding: 10px;
+        border-radius: 5px;
+        width: auto;
+    }
+    .membre{
+    position: relative;
+    left:20px;
+    }
+    .news{
+        background-color: white;
+        margin: auto;
+        padding: 10px;
+        border-radius: 5px;
+        width: auto;
+        border: 2px solid black;
+    }
+    input{
+      height: auto;
+      width: auto;
+      font-size: 1.3em;
+    }
+    select{
+        height: auto;
+        width: auto;
+        font-size: 1.3em;
+    }
+    .ul {
+        text-align:center;
+    }
+    h1, h4, h3, a, p, label, span, button {
+    	font-size:1.3em;
+        text-align:center;
+        color-font:red;
+    }
+    img{
+    	width:auto;
+    }
+    .avatar{
+        width:auto;
+    }
 
 }
 
@@ -191,11 +178,9 @@ img{
 .logo_acteur2{
 display:none;
 }
-
 .text-center {
     text-align: center;
 }
-
 .form-div {
     background-color: #B6B6F1;
     margin: auto;
@@ -203,7 +188,6 @@ display:none;
     border-radius: 5px;
     width: auto;
 }
-
 .form-div2 {
     background-color: #B6B6F1;
     margin: auto;
@@ -211,7 +195,6 @@ display:none;
     border-radius: 5px;
     width: auto;
 }
-
 .form-div3 {
     background-color: white;
     margin: auto;
@@ -219,14 +202,10 @@ display:none;
     border-radius: 5px;
     width: auto;
 }
-
-
-
 .membre{
 position: relative;
 left:20px;
 }
-
 .news{
     background-color: white;
     margin: auto;
@@ -235,7 +214,6 @@ left:20px;
     width: auto;
     border: 2px solid black;
 }
-
 input{
   height: auto;
   width: auto;
@@ -246,42 +224,23 @@ select{
     width: auto;
     font-size: 0.8em;
 }
-
 .ul {
     text-align:center;
 }
-label{
-    font-size:2em;
+label, span, button, a{
+    font-size:1.3em;
 }
-
-
-h1, h4, h3, a, span, button {
-    font-size:1em;
+h1, h4, h3 {
+    font-size:1.5em;
     text-align:center;
-    color-font:red;
+
+
+    
 }
 img{
     width:auto;
 }
 
-.avatar{
-    width:50px;
 
 }
-}
-.footer {
-    text-align: center;
-    background-color: black;
-    padding: 40px;
-    position:relative;
-    top:350px;
-
-}
-
-.header{
-    text-align: center;
-    background-color: #B6B6F1;
-}
-
-
 
