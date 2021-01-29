@@ -48,11 +48,34 @@ if($post['email'] = $userCount['user_email']){
         <title>Espace Client - Accueil</title>
         <link rel="shortcut icon" type="image/png" href="img/fav_icon_gbaf.png">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-<?php
-include 'header.php'
-?>
+
+                                <!-- header -->
+<div class="header">        
+    <center><a href="index.php"><div class="logo_GBAF"><img src="img/logo_gbaf.png" width=10%;></div></a></center>
+        
+        
+<div class="text-header">
+    <center><h4>Le groupement banques assurances</h4></center>
+</div>
+<br><br>
+</div>
+<div class="e-membre">
+<?php if (isset($_SESSION['userEmail'])) { ?>
+    <div class="membre">
+        <a href="espace_membre.php"><br><img src="img/avatar.png" class="avatar"></a>
+        <br><strong><?=htmlentities(trim($_SESSION['userPrenom'])); ?></strong>
+        <strong><?=htmlentities(trim($_SESSION['userNom'])); ?></strong><br>
+
+        <a href="deconnexion.php">Se déconnecter</a>
+<?php }  else { ?>        
+<?php } ?>
+
+</div>
+</div>
+                        <!-- fin header -->
 <hr class="barre">
 <div class="text-center">
     <h3>Nouveau Mot de pass</h3>          
@@ -81,8 +104,14 @@ include 'header.php'
 <p>Vous n'êtes pas connecté !</p>
 <?php } ?>
 </div>
-<?php
-include 'footer.php'
-?>
+                        <!-- footer -->
+<div class="footer">
+    <a href="mentions_legales.php" style="color:white">Mentions legales</a>
+    <a href="mailto:kickkungfumusique@gmail.com" style="color:white">Nous contacter</a>
+</div>
+
+
+
+
     </body>
 </html>
